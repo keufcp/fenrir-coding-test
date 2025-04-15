@@ -18,8 +18,8 @@ export default function Card(props: any) {
             <Image
               src={props.image === undefined ? '/photo-x.svg' : props.image}
               alt={props.name}
-              layout='fill'
-              objectFit='cover'
+              fill
+              style={{ objectFit: 'cover' }}
               quality={100}
             />
           </div>
