@@ -13,6 +13,9 @@ export default function ErrorPage({
       <p className='mt-4 text-lg text-gray-700'>
         ページをリロードしてみてください
       </p>
+      <p className='mt-2 text-lg text-gray-700'>
+        {error instanceof Error ? error.message : String(error)}
+      </p>
     </div>
   )
 }
