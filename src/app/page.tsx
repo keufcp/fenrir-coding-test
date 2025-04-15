@@ -49,7 +49,7 @@ export default function Home() {
   const options = useRef<HotpepperRequest>({
     lat: 0,
     lng: 0,
-    range: 3,
+    range: selectedRange,
     genre: '',
     start: 1,
     count: 10,
