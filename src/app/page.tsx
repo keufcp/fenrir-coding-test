@@ -242,7 +242,7 @@ export default function Home() {
       >
         <button
           type='submit'
-          className='w-full cursor-pointer rounded-md bg-slate-600 p-1 text-sm font-semibold tracking-[0.5em] text-slate-100 ring-2 ring-transparent hover:shadow-xl hover:shadow-slate-500/50 md:p-2 md:text-base md:tracking-[1em] dark:bg-slate-800 dark:text-slate-100'
+          className='w-full cursor-pointer rounded-md bg-slate-600 p-1 text-sm font-semibold tracking-[0.5em] text-slate-100 transition-shadow duration-300 hover:shadow-xl hover:shadow-slate-500/50 md:p-2 md:text-base md:tracking-[1em] dark:bg-slate-800 dark:text-slate-100'
           aria-label='レストランを検索'
         >
           検索
