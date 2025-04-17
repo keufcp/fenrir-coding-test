@@ -3,6 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
+import ThemeProviderWrapper from '@/app/components/ui/themeProviderWrapper'
+
 import { Footer } from './components/layout/footer'
 import { Header } from './components/layout/header'
 
@@ -40,9 +42,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >
-        <Header />
-        <main className='flex-grow'>{children}</main>
-        <Footer />
+        <ThemeProviderWrapper>
+          <Header />
+          <main className='flex-grow'>{children}</main>
+          <Footer />
+        </ThemeProviderWrapper>
       </body>
     </html>
   )
