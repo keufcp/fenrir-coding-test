@@ -20,6 +20,8 @@ fenrir-coding-test
 
 ### 公開したアプリの URL
 
+https://fenrir-coding-test.vercel.app/
+
 ### 該当プロジェクトのリポジトリ URL（GitHub,GitLab など Git ホスティングサービスを利用されている場合）
 
 https://github.com/keufcp/fenrir-coding-test
@@ -42,6 +44,28 @@ TypeScript
 
 ### テーブル定義(ER図)などの設計ドキュメント（ウェブアプリ）
 
+APIキー等の機密情報を秘匿する設計
+
+```mermaid
+---
+config:
+  theme: neo-dark
+---
+sequenceDiagram
+  actor U as User
+  participant S as Server
+  participant API
+  U->>S: Request
+  activate S
+  S->>API: Request
+  activate API
+  API-->>S: Data
+  deactivate API
+  S-->>U: Data
+  deactivate S
+
+```
+
 ### 開発環境構築手順(ウェブアプリ)
 
 1. リポジトリをクローンする
@@ -63,7 +87,11 @@ TypeScript
 
 ### 動作対象OS
 
-- Windows 10/11
+- Windows 10/11 (実機確認)
+- Android 12 (実機確認)
+
+> [!NOTE]
+> 上記以外のOSについては実機確認していません
 
 ### 動作対象ブラウザ
 
@@ -82,10 +110,29 @@ TypeScript
 - 電話アプリ連携：飲食店の電話番号を電話アプリに連携する。
 - 地図アプリ連携：飲食店の所在地を地図アプリに連携する。 -->
 
+レストラン検索
+
+- 現在地情報をGeolocationAPIを用いて取得
+  - 同時に現在地の住所も表示する
+- 取得した緯度経度情報を元にホットペッパーグルメサーチAPIを用いて飲食店の詳細情報を取得する
+  - API情報は各ページごとに取得
+    - 検索件数が多くなったときの読み込み遅延対策
+
 ### 画面一覧
 
 <!-- - 検索画面 ：条件を指定してレストランを検索する。
 - 一覧画面 ：検索結果の飲食店を一覧表示する。 -->
+
+- 全般: レスポンシブデザイン対応
+- 検索画面: 現在地からの半径，予算で絞り込みが可能
+- 一覧画面:
+  - API取得情報から先頭10件を表示
+  - ページングに対応し，各ページごとにデータ取得
+  - 店舗画像がない場合は専用のアイコンを表示
+- 店舗詳細画面:
+  - モーダルにて店舗詳細画面を表示
+  - 各項目をアイコンで表示し，その横に説明文を表示
+  - 店舗画像がない場合は専用のアイコンを表示
 
 ### 使用しているAPI, SDK, ライブラリなど
 
