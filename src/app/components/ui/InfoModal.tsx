@@ -48,6 +48,9 @@ export default function InfoModal({
             width={600}
             height={600}
             quality={100}
+            onError={(e) => {
+              ;(e.target as HTMLImageElement).src = '/photo-x.svg'
+            }}
             className='w-full object-contain md:w-1/2'
           />
           <div className='flex w-full flex-col justify-center p-4 md:w-1/2'>

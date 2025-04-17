@@ -21,6 +21,9 @@ export default function Card(props: any) {
               fill
               style={{ objectFit: 'cover' }}
               quality={100}
+              onError={(e) => {
+                ;(e.target as HTMLImageElement).src = '/photo-x.svg'
+              }}
             />
           </div>
           <div className='p-4'>
