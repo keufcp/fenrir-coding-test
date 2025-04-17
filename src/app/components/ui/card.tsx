@@ -12,8 +12,8 @@ export default function Card(props: any) {
 
   return (
     <>
-      <div className='overflow-hidden rounded-lg bg-slate-100 shadow-2xl ring-slate-500/50 transition-shadow duration-300 hover:shadow-xl hover:ring-2 hover:shadow-slate-500/50 dark:bg-slate-900'>
-        <div onClick={openModal} className='block cursor-pointer'>
+      <div className='cursor-pointer overflow-hidden rounded-lg bg-slate-100 shadow-2xl ring-slate-500/50 transition-shadow duration-300 hover:shadow-xl hover:ring-2 hover:shadow-slate-500/50 dark:bg-slate-900'>
+        <div onClick={openModal} className='block'>
           <div className='relative aspect-[4/3] w-full'>
             <Image
               src={props.image === undefined ? '/photo-x.svg' : props.image}

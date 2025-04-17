@@ -199,7 +199,7 @@ export default function Home() {
           <button
             key={option.value}
             type='button'
-            className={`cursor-pointer rounded-md bg-slate-200 p-1 text-sm text-slate-700 hover:shadow-xl hover:shadow-slate-500/50 md:p-2 md:text-base dark:bg-slate-700 dark:text-slate-200 ${selectedRange === option.value ? 'ring-2 ring-slate-400' : 'ring-transparent'}`}
+            className={`cursor-pointer rounded-md bg-slate-200 p-1 text-sm text-slate-700 ring-slate-500/50 transition-shadow duration-300 hover:shadow-xl hover:ring-2 hover:shadow-slate-500/50 md:p-2 md:text-base dark:bg-slate-700 dark:text-slate-200 ${selectedRange === option.value ? 'ring-2 ring-slate-400' : ''}`}
             onClick={() => {
               options.current.range = option.value
               setSelectedRange(option.value)
@@ -221,7 +221,7 @@ export default function Home() {
               onClick={() => {
                 handleBudgetChange(data.code)
               }}
-              className={`cursor-pointer rounded-md bg-slate-200 p-1 text-xs text-slate-700 hover:shadow-xl hover:shadow-slate-500/50 md:p-2 md:text-sm dark:bg-slate-700 dark:text-slate-200 ${selectedBudget === data.code ? 'ring-2 ring-slate-400' : 'ring-transparent'}`}
+              className={`cursor-pointer rounded-md bg-slate-200 p-1 text-xs text-slate-700 ring-slate-500/50 transition-shadow duration-300 hover:shadow-xl hover:ring-2 hover:shadow-slate-500/50 md:p-2 md:text-sm dark:bg-slate-700 dark:text-slate-200 ${selectedBudget === data.code ? 'ring-2 ring-slate-400' : ''}`}
             >
               {data.name}
             </button>
@@ -231,7 +231,7 @@ export default function Home() {
           onClick={() => {
             handleBudgetChange('')
           }}
-          className={`cursor-pointer rounded-md bg-slate-200 p-1 text-xs text-slate-700 hover:shadow-xl hover:shadow-slate-500/50 md:p-2 md:text-sm dark:bg-slate-700 dark:text-slate-200 ${selectedBudget === '' ? 'ring-2 ring-slate-400' : 'ring-transparent'}`}
+          className={`cursor-pointer rounded-md bg-slate-200 p-1 text-xs text-slate-700 ring-slate-500/50 transition-shadow duration-300 hover:shadow-xl hover:ring-2 hover:shadow-slate-500/50 md:p-2 md:text-sm dark:bg-slate-700 dark:text-slate-200 ${selectedBudget === '' ? 'ring-2 ring-slate-400' : ''}`}
         >
           選択なし
         </button>
