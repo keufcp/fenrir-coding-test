@@ -121,3 +121,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.btn {
+  @apply cursor-pointer rounded-md text-xs p-2 md:text-sm transition-shadow duration-300 hover:shadow-xl hover:ring-2 hover:shadow-slate-500/50;
+}
+
+.btn-light {
+  @apply bg-slate-200 text-slate-700 ring-slate-500/50 ;
+}
+
+.btn-dark {
+  @apply dark:bg-slate-700 dark:text-slate-200 dark:ring-slate-300/50;
+}
+
+.btn-light-active {
+  @apply ring-2 ring-slate-500/50;
+}
+
+.btn-dark-active {
+  @apply ring-2 dark:ring-slate-300/50;
+}
