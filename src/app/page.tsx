@@ -25,7 +25,15 @@ import GetAddressData from './lib/getAddress'
 import GetBudgetData from './lib/getBudgetData'
 import LoadingPage from './loading'
 
+import { Moon, Sun } from 'lucide-react' //`太陽と月のマーク
+import { useTheme } from 'next-themes' //`テーマの切り替え用のカスタムフック
+
+import { Switch } from '@/components/ui/switch'
+
 export default function Home() {
+  // テーマ設定
+  const { theme, setTheme } = useTheme()
+
   const { coords, error } = useGeolocation()
 
   const [items, setItems] = useState<HotpepperResponse>()
@@ -177,6 +185,15 @@ export default function Home() {
 
   return (
     <>
+      <div className='absolute right-2 mt-2 mr-0 flex items-center space-x-1 rounded-md bg-slate-200 p-2 sm:right-2 md:right-2 md:mr-2 dark:bg-slate-700 dark:text-slate-200'>
+        <Sun className='h-4 w-4' />
+        <Switch
+          checked={theme === 'dark'}
+          onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+          className='cursor-pointer ring-1 ring-slate-500/50'
+        />
+        <Moon className='h-4 w-4' />
+      </div>
       <h1 className='flex justify-center pt-2 text-lg font-semibold md:text-xl'>
         現在地情報
       </h1>
