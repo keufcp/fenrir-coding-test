@@ -70,8 +70,8 @@ sequenceDiagram
 
 1. リポジトリをクローンする
 1. `.env.template`を元に環境変数を設定する
-   1. [HotpepperグルメサーチAPI](http://webservice.recruit.co.jp/HotPepper/)
-   1. [Hotpepper検索用ディナー予算マスタAPI](https://webservice.recruit.co.jp/doc/hotpepper/reference.html#:~:text=desc%3E%0A%C2%A0%20%3C/shop%3E-,%E6%A4%9C%E7%B4%A2%E7%94%A8%E3%83%87%E3%82%A3%E3%83%8A%E3%83%BC%E4%BA%88%E7%AE%97%E3%83%9E%E3%82%B9%E3%82%BFAPI,-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88URL)
+   1. [HotpepperグルメサーチAPI](https://webservice.recruit.co.jp/doc/hotpepper/reference.html)
+   1. [Hotpepper検索用ディナー予算マスタAPI](https://webservice.recruit.co.jp/doc/hotpepper/reference.html)
    1. [Yahoo!リバースジオコーダAPI](https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/reversegeocoder.html)
 1. プロジェクトディレクトリで下記コマンドを実行
 
