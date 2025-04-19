@@ -16,13 +16,13 @@ export default function Card(props: any) {
         <div onClick={openModal} className='block'>
           <div className='relative aspect-[4/3] w-full'>
             <Image
-              src={props.image === undefined ? '/photo-x.svg' : props.image}
+              src={props.image === undefined ? '/photo-x.png' : props.image}
               alt={props.name}
               fill
               style={{ objectFit: 'cover' }}
               quality={100}
               onError={(e) => {
-                ;(e.target as HTMLImageElement).src = '/photo-x.svg'
+                ;(e.target as HTMLImageElement).src = '/photo-x.png'
               }}
             />
           </div>

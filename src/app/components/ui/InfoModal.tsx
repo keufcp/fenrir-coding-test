@@ -43,13 +43,13 @@ export default function InfoModal({
             <CloseIcon className='h-10 w-10' />
           </button>
           <Image
-            src={data.image === undefined ? '/photo-x.svg' : data.image}
+            src={data.image === undefined ? '/photo-x.png' : data.image}
             alt={data.name}
             width={600}
             height={600}
             quality={100}
             onError={(e) => {
-              ;(e.target as HTMLImageElement).src = '/photo-x.svg'
+              ;(e.target as HTMLImageElement).src = '/photo-x.png'
             }}
             className='w-full object-contain md:w-1/2'
           />
