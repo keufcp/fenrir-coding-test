@@ -1,6 +1,6 @@
 'use client'
-import { Moon, Sun } from 'lucide-react' //`太陽と月のマーク
-import { useTheme } from 'next-themes' //`テーマの切り替え用のカスタムフック
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 import Card from '@/app/components/ui/card'
@@ -37,7 +37,6 @@ export default function Home() {
   const [selectedRange, setSelectedRange] = useState<number>(5) // 初期値は最大(値5，半径3000m)に設定
 
   const [budget, setBudget] = useState<BudgetResponse>() // 予算情報を格納するステート
-  // const selectedBudget = useRef<string>('') // 予算情報を格納するref // codeで管理
   const [selectedBudget, setSelectedBudget] = useState<string>('') // 予算情報を格納するステート // codeで管理
 
   const [address, setAddress] = useState<string>('') // 住所情報を格納するステート
